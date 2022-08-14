@@ -56,15 +56,26 @@ document.getElementById('postBtn').addEventListener('click',function(){
     subCommentBox.appendChild(commentAuthor);
 
     mainCommentBox.appendChild(subCommentBox);
-    console.log(mainCommentBox);
     }
 
+    function deletes(){
+        let deleteElement = document.getElementsByClassName('delete');
+        for(let element of deleteElement){
+            
+            element.addEventListener('click',function(event){
+                let subCommentbox = document.getElementsByClassName('subCommentBox');
+                event.target.parentNode.parentNode.parentNode.parentNode.removeChild(subCommentbox);
+                // console.log(event.target.parentNode.parentNode.parentNode.parentNode);
+            })
+        }
+    }
     //checking name
     if(name==''){
         errorForName.style.display = 'none';
         authorName.innerText= 'Anonymous';
 
         proceed();
+        deletes();
     }else if(isNaN(name)!=true){
         errorForName.style.display = 'block';
         errorForName.innerText = 'Number not allowed';
@@ -73,7 +84,7 @@ document.getElementById('postBtn').addEventListener('click',function(){
         authorName.innerText = name;     //got the name here  
         
         proceed();
-
+        deletes();
     }
 
     
