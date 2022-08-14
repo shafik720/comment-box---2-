@@ -16,6 +16,11 @@
             font-family: 'Nunito', sans-serif ;
         }
 
+        .comment{
+            border-bottom: 1px solid #F1F3F4;
+            padding-bottom: 25px;
+        }
+
         .comment-author{
             display: flex;
             justify-content: space-between;
@@ -24,6 +29,12 @@
         }
         .comment-author span{
             cursor: pointer;
+        }
+        .comment-author-name h5, p{
+            margin: 0;
+        }
+        .comment-author-name p{
+            font-size: 14px;
         }
     </style>
 </head>
@@ -48,10 +59,14 @@
                 <div class="col-lg-1"></div>
                 <div class="col-lg-7">
                     <div class=" border border-warning border-3 p-4 rounded">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus illo nam deserunt odit, laborum distinctio, eos officia unde officiis facilis pariatur velit nulla magni, ipsam saepe suscipit at eum natus?</p>
-                        <div class="comment-author">
-                            <h5 class="fw-bold text-primary">Jonathan Wick</h5>
-                            <p id="dummyDate"></p>
+                        <div class="comment">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus illo nam deserunt odit, laborum distinctio, eos officia unde officiis facilis pariatur velit nulla magni, ipsam saepe suscipit at eum natus?</p>
+                        </div>
+                        <div class="comment-author ">
+                            <div class="comment-author-name">
+                                <h5 class="fw-bold text-primary">Jonathan Wick</h5>
+                                <p id="dummyDate"></p>
+                            </div>                            
                             <span><i class="fa-solid fa-trash-can"></i></span>
                         </div>
                     </div>
