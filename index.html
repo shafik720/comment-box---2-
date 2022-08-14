@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+    <!-- Bootstrap css  -->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <!-- Font awesome css -->
+    <link rel="stylesheet" href="assets/fontawesome/font-awesome.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Varela+Round&display=swap');
+
+        body{
+            font-family: 'Nunito', sans-serif ;
+        }
+
+        .comment-author{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+        }
+        .comment-author span{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+        <div class="container py-5 my-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label fw-bold">Your Name</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Write your name here">
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label fw-bold">Your Comment</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                          </div>
+                          <button type="button" class="btn btn-warning px-4 my-3">Post</button>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-7">
+                    <div class=" border border-warning border-3 p-4 rounded">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus illo nam deserunt odit, laborum distinctio, eos officia unde officiis facilis pariatur velit nulla magni, ipsam saepe suscipit at eum natus?</p>
+                        <div class="comment-author">
+                            <h5 class="fw-bold text-primary">Jonathan Wick</h5>
+                            <p id="dummyDate"></p>
+                            <span><i class="fa-solid fa-trash-can"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
