@@ -3,6 +3,8 @@ let timeElapsed = Date.now();
 let today = new Date(timeElapsed);
 document.getElementById('dummyDate').innerText = today.toLocaleString();
 
+
+
 document.getElementById('postBtn').addEventListener('click',function(){
     //date and time
     let timeElapsed = Date.now();
@@ -20,6 +22,18 @@ document.getElementById('postBtn').addEventListener('click',function(){
     authorName.classList.add('authorName');
     let commentPosted = document.createElement('p');
     
+    function deleting(){
+        
+        let deleteElement = document.getElementsByClassName('delete');
+        // let subComment = document.getElementsByClassName('subCommentBox');
+                for(let element of deleteElement){            
+                    element.addEventListener('click',function(event){
+                        event.target.parentNode.parentNode.parentNode.style.display ='none';
+                        // console.log(event.target.parentNode.parentNode.parentNode);
+                    })
+                }
+    }
+
     function proceed(){
             //checking comment
     if(comment==''){        
@@ -57,6 +71,8 @@ document.getElementById('postBtn').addEventListener('click',function(){
     subCommentBox.appendChild(commentAuthor);
 
     mainCommentBox.appendChild(subCommentBox);
+
+    deleting();
     }
 
     
@@ -88,10 +104,3 @@ document.getElementById('postBtn').addEventListener('click',function(){
 })
 
 
-let deleteElement = document.getElementsByClassName('delete');
-        for(let element of deleteElement){            
-            element.addEventListener('click',function(event){
-                event.target.parentNode.parentNode.parentNode.parentNode.removeChild(subCommentBox);
-                // console.log(event.target.parentNode.parentNode.parentNode.parentNode);
-            })
-        }
