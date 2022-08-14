@@ -25,10 +25,9 @@ document.getElementById('postBtn').addEventListener('click',function(){
         errorForName.innerText = 'Number not allowed';
     }else{
         errorForName.style.display = 'none';
-        authorName.innerText = name;     //got the name here   
-    }
-
-    //checking comment
+        authorName.innerText = name;     //got the name here  
+        
+        //checking comment
     if(comment==''){        
         errorForComment.style.display = 'block';
         errorForComment.innerText = 'This field can not be empty';
@@ -63,6 +62,9 @@ document.getElementById('postBtn').addEventListener('click',function(){
     mainCommentBox.appendChild(subCommentBox);
     console.log(mainCommentBox);
 
+    }
+
+    
 
     //clearing the input field
     names.value = '';
