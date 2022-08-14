@@ -36,6 +36,22 @@
         .comment-author-name p{
             font-size: 14px;
         }
+        .error{
+            display: none;
+            color: red;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+        .subCommentBox{
+            border: 3px solid #FFC107;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        .authorName{
+            font-weight: 800;
+            color: #007ACC;
+        }
     </style>
 </head>
 <body>
@@ -47,27 +63,31 @@
                     <div class="">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label fw-bold">Your Name</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Write your name here">
+                            <input id="name" type="email" class="form-control"  placeholder="Write your name here">
+                            <p id="errorForName" class="error"></p>
                           </div>
                           <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label fw-bold">Your Comment</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                            <textarea class="form-control" id="comment" rows="5"></textarea>
+                            <p id="errorForComment" class="error"></p>
                           </div>
-                          <button type="button" class="btn btn-warning px-4 my-3">Post</button>
+                          <button id="postBtn" type="button" class="btn btn-warning px-4 my-3">Post</button>
                     </div>
                 </div>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-7">
-                    <div class=" border border-warning border-3 p-4 rounded">
-                        <div class="comment">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus illo nam deserunt odit, laborum distinctio, eos officia unde officiis facilis pariatur velit nulla magni, ipsam saepe suscipit at eum natus?</p>
-                        </div>
-                        <div class="comment-author ">
-                            <div class="comment-author-name">
-                                <h5 class="fw-bold text-primary">Jonathan Wick</h5>
-                                <p id="dummyDate"></p>
-                            </div>                            
-                            <span><i class="fa-solid fa-trash-can"></i></span>
+                    <div id="mainCommentBox" class=" ">
+                        <div id="subCommentBox" class=" subCommentBox ">
+                            <div class="comment">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus illo nam deserunt odit, laborum distinctio, eos officia unde officiis facilis pariatur velit nulla magni, ipsam saepe suscipit at eum natus?</p>
+                            </div>
+                            <div class="comment-author ">
+                                <div class="comment-author-name">
+                                    <h5 class="authorName">Jonathan Wick</h5>
+                                    <p class="dummyDate"></p>
+                                </div>                            
+                                <span><i class="fa-solid fa-trash-can"></i></span>
+                            </div>
                         </div>
                     </div>
                 </div>
