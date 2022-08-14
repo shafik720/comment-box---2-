@@ -60,6 +60,7 @@ document.getElementById('postBtn').addEventListener('click',function(){
     commentAuthor.classList.add('comment-author');
     commentAuthor.appendChild(authorForSubcommentBox);
     let span = document.createElement('span');
+    span.classList.add('delete');
     span.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
     commentAuthor.appendChild(span);
     subCommentBox.appendChild(commentAuthor);
