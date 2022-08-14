@@ -1,9 +1,13 @@
 
-const timeElapsed = Date.now();
-const today = new Date(timeElapsed);
-document.getElementsByClassName('dummyDate').innerText = today.toLocaleString();
+let timeElapsed = Date.now();
+let today = new Date(timeElapsed);
+document.getElementById('dummyDate').innerText = today.toLocaleString();
 
 document.getElementById('postBtn').addEventListener('click',function(){
+    //date and time
+    let timeElapsed = Date.now();
+    let today = new Date(timeElapsed);
+
     let names = document.getElementById('name');
     let name = names.value;
     let comments = document.getElementById('comment');
@@ -49,6 +53,7 @@ document.getElementById('postBtn').addEventListener('click',function(){
     authorForSubcommentBox.appendChild(authorName);
     let dateDiv = document.createElement('p');
     dateDiv.classList.add('dummyDate')
+    dateDiv.innerText = today.toLocaleString();
     authorForSubcommentBox.appendChild(dateDiv);
 
     let commentAuthor = document.createElement('div');
