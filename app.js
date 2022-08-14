@@ -19,19 +19,9 @@ document.getElementById('postBtn').addEventListener('click',function(){
     let authorName = document.createElement('h5');
     authorName.classList.add('authorName');
     let commentPosted = document.createElement('p');
-
-    //checking name
-    if(name==''){
-        errorForName.style.display = 'none';
-        authorName.innerText= 'Anonymous';
-    }else if(isNaN(name)!=true){
-        errorForName.style.display = 'block';
-        errorForName.innerText = 'Number not allowed';
-    }else{
-        errorForName.style.display = 'none';
-        authorName.innerText = name;     //got the name here  
-        
-        //checking comment
+    
+    function proceed(){
+            //checking comment
     if(comment==''){        
         errorForComment.style.display = 'block';
         errorForComment.innerText = 'This field can not be empty';
@@ -67,6 +57,22 @@ document.getElementById('postBtn').addEventListener('click',function(){
 
     mainCommentBox.appendChild(subCommentBox);
     console.log(mainCommentBox);
+    }
+
+    //checking name
+    if(name==''){
+        errorForName.style.display = 'none';
+        authorName.innerText= 'Anonymous';
+
+        proceed();
+    }else if(isNaN(name)!=true){
+        errorForName.style.display = 'block';
+        errorForName.innerText = 'Number not allowed';
+    }else{
+        errorForName.style.display = 'none';
+        authorName.innerText = name;     //got the name here  
+        
+        proceed();
 
     }
 
